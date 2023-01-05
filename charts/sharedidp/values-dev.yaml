@@ -91,7 +91,7 @@ secrets:
         password: "<path:portal/data/dev/iam/sharedidp-postgres#password>"
         replicationPassword: "<path:portal/data/dev/iam/sharedidp-postgres#replication-password>"
   realmuser:
-    enabled: false
+    enabled: true
     cxtestaccessuser: "<path:portal/data/iam/sharedidp-user#CX-Test-Access-users-0.json>"
     company1user: "<path:portal/data/iam/sharedidp-user#Company-1-users-0.json>"
     company2user: "<path:portal/data/iam/sharedidp-user#Company-2-users-0.json>"
