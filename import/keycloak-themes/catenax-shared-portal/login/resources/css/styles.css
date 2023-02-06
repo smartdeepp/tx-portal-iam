@@ -17,8 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-@import '../fonts/calibri-font/stylesheet.css';
-@import '../fonts/karbon/stylesheet.css';
+@import "../fonts/calibri-font/stylesheet.css";
+@import "../fonts/karbon/stylesheet.css";
 
 h4,
 p {
@@ -35,37 +35,14 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Karbon', sans-serif;
+  font-family: "Karbon", sans-serif;
   font-size: 1.4rem;
+  background-color: #fafafa;
 }
 
 @media screen and (max-width: 600px) {
   html {
     font-size: 6px;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 1023px) {
-  html {
-    font-size: 7.5px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  html {
-    font-size: 6px;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1440px) {
-  html {
-    font-size: 7.2px;
-  }
-}
-
-@media (min-width: 1401px) and (max-width: 1900px) {
-  html {
-    font-size: 8.5px;
   }
 }
 
@@ -111,16 +88,47 @@ body {
 }
 
 .signup-container__body-parent {
-  height: calc(100vh - 18rem);
+  height: calc(100vh - 13rem);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.signup-container__body-image-container {
+  display: flex;
+  position: relative;
+}
+
+.union-logo {
+  background-image: url("./../images/union.svg");
+  height: 86.3rem;
+  background-repeat: no-repeat;
+  background-size: 145% 120%;
+  background-position-x: -194px;
+  width: 40rem;
+}
+
+.union-logo-white {
+  background-image: url("./../images/union-white.svg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.signup-container__body-image-container .user-icon {
+  width: 36.5rem;
+  position: relative;
+  top: 4.1rem;
+  left: -7.2rem;
 }
 
 .signup-container__body {
   width: 50rem;
   margin: 0 auto;
-  padding: 3.2rem 4rem;
+  padding: 8rem 4rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -139,22 +147,28 @@ body {
   align-items: flex-start;
 }
 
-.signup-container__body .form-control, 
-.signup-container__body .form-control-button {
-  margin: 0 auto;
-}
-
 .signup-container__body h4 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  margin-bottom: 1rem;
 }
 
 .signup-container__body p {
-  letter-spacing: 0.3px;
-  line-height: 1.5;
-  font-size: 1.4rem;
-  margin-bottom: 6rem;
-  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  margin-bottom: 8rem;
 }
 
 .form-control {
@@ -163,21 +177,31 @@ body {
 
 .signup-container__body label {
   display: block;
-  text-align: left;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #afafaf;
 }
 
 .signup-container__body input {
+  font-family: "Karbon", sans-serif;
   width: 100%;
   height: 2.5rem;
-  font-size: 1.4rem;
   outline: none;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
-  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000000;
   background-color: #fff;
   padding: 0.5 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.signup-container__body input:focus {
+  border-bottom: solid 1px #d31184;
 }
 
 .signup-container__body .user-icon {
@@ -187,11 +211,12 @@ body {
 }
 
 .signup-container__footer {
-  text-align: center;
-  position: absolute;
-  bottom: 5rem;
   width: 100%;
   margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 8rem;
 }
 
 .signup-container__footer nav {
@@ -207,12 +232,20 @@ body {
 }
 
 .signup-container__footer nav div a {
-  color: #000;
-  font-size: 1.4rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: #4d4d4d;
 }
 
 .signup-container__footer span {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: #4d4d4d;
 }
 
 .relative-position {
@@ -268,13 +301,16 @@ body {
 
 /* Placeholder property  */
 ::-webkit-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  color: #4d4d4f;
 }
 
 :-ms-input-placeholder {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  color: #4d4d4f;
 }
 
 ::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  color: #4d4d4f;
 }

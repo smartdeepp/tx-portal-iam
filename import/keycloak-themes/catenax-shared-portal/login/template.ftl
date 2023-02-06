@@ -59,7 +59,7 @@
 
 <body class="${properties.kcBodyClass!}">
     <div class="signup-container">
-      <div class="signup-container__header">
+      <#--  <div class="signup-container__header">
         <a href="#">
           <img src="${url.resourcesPath}/images/cx-text.svg" width="200" />
         </a>
@@ -70,13 +70,13 @@
             </li>
             <#if realm.internationalizationEnabled>
             <li>|</li>
-            <#--  <li>
+            <li>
                 <#assign isEn = locale.currentLanguageTag == 'en'>
               <a id="lnkDE" onclick="changeLocale('de',${url})" class="${isEn?then('','active')}">DE</a>
             </li>
             <li>
               <a id="lnkEN" onclick="changeLocale('en',${url})" class="${isEn?then('active','')}">EN</a>
-            </li>  -->
+            </li>
 
             <#list locale.supported as l>
                 <li class="kc-dropdown-item">
@@ -87,7 +87,7 @@
             </#if>
           </ul>
         </div>
-      </div>
+      </div>  -->
       <#nested "form">
       <div class="signup-container__footer">
         <nav>

@@ -26,6 +26,12 @@
             <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
                 <#if realm.password>
                 <div class="signup-container__body-parent">
+                    <div class="signup-container__body-image-container">
+                        <div class="union-logo"></div>
+                        <img class="user-icon" src="${url.resourcesPath}/images/cofinity-X_logo.svg" alt="" />
+                        <div class="union-logo-white"></div>
+                    </div>
+
                     <div class="signup-container__body">
                         <div class="signup-container__body--header">
                             <div>
@@ -36,7 +42,7 @@
                             </div>
 
                             <div>
-                                <img class="user-icon" src="${url.resourcesPath}/images/lock.svg" alt="" />
+                                <img src="${url.resourcesPath}/images/lock.svg" width="39" alt="" />
                             </div>
                         </div>
 
