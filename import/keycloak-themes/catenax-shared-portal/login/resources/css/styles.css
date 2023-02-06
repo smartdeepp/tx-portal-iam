@@ -17,60 +17,62 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+@import '../fonts/calibri-font/stylesheet.css';
+@import '../fonts/karbon/stylesheet.css';
 
 h4,
 p {
   margin: 0;
 }
 
-
 /* Responsive support start */
 html {
   font-size: 10px;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Karbon', sans-serif;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 600px) {
-    html {
-      font-size: 6px;
-    }
+  html {
+    font-size: 6px;
   }
+}
 
 @media (min-width: 600px) and (max-width: 1023px) {
-    html {
-      font-size: 7.5px;
-    }
+  html {
+    font-size: 7.5px;
   }
+}
 
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    html {
-      font-size: 6px;
-    }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  html {
+    font-size: 6px;
   }
+}
 
-  @media (min-width: 1280px) and (max-width: 1440px) {
-    html {
-      font-size: 7.2px;
-    }
+@media (min-width: 1280px) and (max-width: 1440px) {
+  html {
+    font-size: 7.2px;
   }
+}
 
-  @media (min-width: 1401px) and (max-width: 1900px) {
-    html {
-      font-size: 8.5px;
-    }
+@media (min-width: 1401px) and (max-width: 1900px) {
+  html {
+    font-size: 8.5px;
   }
+}
 
-
-  /* Responsive support ends  */
+/* Responsive support ends  */
 
 .signup-container {
-  background-image: url("../images/background.svg");
+  /* background-image: url("../images/background.svg"); */
   background-size: cover;
   background-repeat: no-repeat;
   position: fixed;
@@ -108,7 +110,7 @@ html {
   color: #000;
 }
 
-.signup-container__body-parent{
+.signup-container__body-parent {
   height: calc(100vh - 18rem);
   display: flex;
   align-items: center;
@@ -116,22 +118,29 @@ html {
 }
 
 .signup-container__body {
-  background-color: #fff;
-  width: 35%;
-  /* width: 60%; */
+  width: 50rem;
   margin: 0 auto;
-  border-radius: 3rem;
-  padding: 4rem 0 0;
-  text-align: center;
+  padding: 3.2rem 4rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   overflow-y: auto;
   max-height: calc(100vh - 25rem);
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 1px 1px 25px #00000033;
+  border-radius: 1.6rem;
+  opacity: 1;
+  box-sizing: border-box;
 }
 
-.signup-container__body > div {
-  width: 75%;
+.signup-container__body--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.signup-container__body .form-control, 
+.signup-container__body .form-control-button {
   margin: 0 auto;
 }
 
@@ -167,21 +176,14 @@ html {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
   color: rgba(0, 0, 0, 0.5);
-  background-color: #f9f9f9;
+  background-color: #fff;
   padding: 0.5 1rem;
 }
 
-.signup-container__body input[name="password"] {
-  padding-right: 5rem;
-}
-
 .signup-container__body .user-icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  background-color: #1772cb;
-  border-radius: 50%;
+  height: 3.5rem;
+  width: 3.5rem;
   margin-bottom: 2rem;
-  padding: 1.5rem;
 }
 
 .signup-container__footer {
@@ -240,14 +242,13 @@ html {
 }
 
 .form-control-button button {
-  border-radius: 3rem;
-  background-color: #1772cb;
+  border-radius: 0.5rem;
+  background-color: #000000;
   cursor: pointer;
-  padding: 1.4rem 2rem;
+  padding: 1.4rem 2.4rem;
   text-align: left;
   color: #fff;
   border: none;
-  margin-bottom: 5rem !important;
   font-size: 1.4rem;
 }
 
@@ -265,15 +266,12 @@ html {
   margin-bottom: 5rem;
 }
 
-
-
-
 /* Placeholder property  */
-::-webkit-input-placeholder { 
+::-webkit-input-placeholder {
   font-size: 1.4rem;
 }
 
-:-ms-input-placeholder { 
+:-ms-input-placeholder {
   font-size: 1.4rem;
 }
 

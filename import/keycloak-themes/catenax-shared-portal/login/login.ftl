@@ -27,60 +27,69 @@
                 <#if realm.password>
                 <div class="signup-container__body-parent">
                     <div class="signup-container__body">
-                        <div>
-                        <img class="user-icon" src="${url.resourcesPath}/images/user.svg" alt="" />
-                        <h4>${msg("header")}</h4>
-                        <p>
-                            ${msg("sub-header")}
-                        </p>
+                        <div class="signup-container__body--header">
+                            <div>
+                                <h4>${msg("header")}</h4>
+                                <p>
+                                    ${msg("sub-header")}
+                                </p>
+                            </div>
+
+                            <div>
+                                <img class="user-icon" src="${url.resourcesPath}/images/lock.svg" alt="" />
+                            </div>
                         </div>
+
                         <div>
-                        <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
-                            <div class="form-control">
-                            <label>Company</label>
-                            <input
-                                autocomplete="off"
-                                placeholder="Enter company name"
-                                id="companyname"
-                                name="companyname"
-                                type="text"
-                                value="${realm.name}"
-                                readonly
-                            />
-                            </div>
-                            <div class="form-control">
-                            <label>Email</label>
-                            <input
-                                autocomplete="off"
-                                placeholder="Enter email"
-                                id="username"
-                                name="username"
-                                type="text"
-                                autofocus
-                                required
-                            />
-                            </div>
-                            <div class="form-control">
-                            <label>Password</label>
-                            <div class="relative-position">
-                                <input
-                                autocomplete="off"
-                                placeholder="Enter password"
-                                id="password"
-                                name="password"
-                                type="password"
-                                autofocus
-                                required
-                                />
-                            </div>
-                            </div>
-                            <div class="form-control-button">
-                            <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
-                            <button name="login" type="submit" id="kc-login">${msg("login")}</button>
+                            <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
+                                <div class="form-control">
+                                    <label>Company *</label>
+                                    <input
+                                        autocomplete="off"
+                                        placeholder="Enter company name"
+                                        id="companyname"
+                                        name="companyname"
+                                        type="text"
+                                        value="${realm.name}"
+                                        readonly
+                                    />
+                                </div>
                             
-                            </div>
-                        </form>
+                                <div class="form-control">
+                                    <label>Email *</label>
+                                    <input
+                                        autocomplete="off"
+                                        placeholder="Enter email"
+                                        id="username"
+                                        name="username"
+                                        type="text"
+                                        autofocus
+                                        required
+                                    />
+                                </div>
+                            
+                                <div class="form-control">
+                                    <label>Password *</label>
+                                    <#--  <div class="relative-position">  -->
+                                        <input
+                                        autocomplete="off"
+                                        placeholder="Enter password"
+                                        id="password"
+                                        name="password"
+                                        type="password"
+                                        autofocus
+                                        required
+                                        />
+                                    <#--  </div>  -->
+                                </div>
+
+                                <div class="form-control-button">
+                                    <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
+                                    <button name="login" type="submit" id="kc-login">${msg("login")}</button>
+                                </div>
+                            </form>
                         </div>
+
                         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
                             <div class="gray-bg">
                             <p>
